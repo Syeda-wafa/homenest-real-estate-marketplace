@@ -93,12 +93,12 @@ const registerUser = async (req, res) => {
   } catch (error) {
     console.error(
       "Register Error:",
-      error.message
+      error
     );
 
     res.status(500).json({
       success: false,
-      message: "Registration failed",
+      message: error.message,
     });
   }
 };
