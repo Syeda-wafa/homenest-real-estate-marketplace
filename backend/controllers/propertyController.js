@@ -1,4 +1,29 @@
 const Property = require("../models/Property");
+const cloudinary = require("../config/cloudinary");
+
+// =====================================
+// CLOUDINARY UPLOAD HELPER
+// =====================================
+
+const uploadToCloudinary = (fileBuffer) => {
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder: "homenest/properties",
+        resource_type: "image",
+      },
+      (error, result) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result);
+        }
+      }
+    );
+
+    uploadStream.end(fileBuffer);
+  });
+};
 
 // =====================================
 // CREATE PROPERTY
@@ -36,10 +61,21 @@ const createProperty = async (req, res) => {
 
     // IMAGES
 
-    const images =
-      req.files?.map((file) => {
-        return `/uploads/${file.filename}`;
-      }) || [];
+   // =====================================
+// UPLOAD IMAGES TO CLOUDINARY
+// =====================================
+
+let images = [];
+
+if (req.files && req.files.length > 0) {
+  const uploadedImages = await Promise.all(
+    req.files.map((file) =>
+      uploadToCloudinary(file.buffer)
+    )
+  );
+
+  images = uploadedImages.map((image) => image.secure_url);
+}
 
     // Create property
     const property = await Property.create({

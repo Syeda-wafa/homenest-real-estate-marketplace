@@ -1,5 +1,8 @@
-const express = require("express");
 const dotenv = require("dotenv");
+
+dotenv.config();
+
+const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
@@ -13,7 +16,6 @@ const userRoutes = require("./routes/userRoutes");
 const propertyRoutes = require("./routes/propertyRoutes");
 const favoriteRoutes = require("./routes/favoriteRoutes");
 
-dotenv.config();
 
 // =====================================
 // DATABASE
