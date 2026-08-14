@@ -61,13 +61,13 @@ const createProperty = async (req, res) => {
 
     // IMAGES
 
-   // =====================================
-// UPLOAD IMAGES TO CLOUDINARY
-// =====================================
+  // =====================================
+  // UPLOAD IMAGES TO CLOUDINARY
+  // =====================================
 
-let images = [];
+  let images = [];
 
-if (req.files && req.files.length > 0) {
+  if (req.files && req.files.length > 0) {
   const uploadedImages = await Promise.all(
     req.files.map((file) =>
       uploadToCloudinary(file.buffer)
