@@ -1,0 +1,465 @@
+/* =========================
+   PAGE
+========================= */
+
+.not-found-page {
+  min-height: 100vh;
+
+  background: #f8f9f6;
+
+  color: #183c2c;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.not-found-container {
+  position: relative;
+
+  min-height: calc(100vh - 75px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 24px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   DECORATIVE CIRCLES
+========================= */
+
+.not-found-circle {
+  position: absolute;
+
+  border: 1px solid rgba(24, 60, 44, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.circle-one {
+  width: 520px;
+  height: 520px;
+
+  top: -230px;
+  right: -180px;
+}
+
+.circle-two {
+  width: 420px;
+  height: 420px;
+
+  bottom: -220px;
+  left: -180px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.not-found-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 650px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.not-found-logo {
+  width: 48px;
+  height: 48px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #183c2c;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(24, 60, 44, 0.12);
+}
+
+
+/* =========================
+   404 NUMBER
+========================= */
+
+.not-found-number {
+  display: block;
+
+  color: #dce6df;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(100px, 17vw, 190px);
+
+  font-weight: 700;
+
+  line-height: 0.8;
+
+  letter-spacing: -8px;
+
+  user-select: none;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.not-found-label {
+  display: block;
+
+  margin-top: 25px;
+
+  color: #71877b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.not-found-content h1 {
+  margin: 12px 0 15px;
+
+  color: #183c2c;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.12;
+
+  letter-spacing: -1px;
+}
+
+.not-found-content h1 span {
+  color: #71877b;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.not-found-content > p {
+  max-width: 510px;
+
+  margin: 0 auto;
+
+  color: #7b857f;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.not-found-actions {
+  margin-top: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.not-found-primary-btn {
+  min-width: 145px;
+
+  height: 46px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  background: #183c2c;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.not-found-primary-btn span {
+  font-size: 16px;
+}
+
+.not-found-primary-btn:hover {
+  background: #24563f;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.not-found-secondary-btn {
+  min-width: 155px;
+
+  height: 46px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6dfd9;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #547160;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.not-found-secondary-btn:hover {
+  border-color: #183c2c;
+
+  background: #183c2c;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   FOOTER TEXT
+========================= */
+
+.not-found-footer-text {
+  position: absolute;
+
+  bottom: 25px;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.not-found-footer-text span {
+  color: #183c2c;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.not-found-footer-text p {
+  margin: 0;
+
+  color: #a0a8a3;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+  .not-found-container {
+    min-height: calc(100vh - 65px);
+
+    padding: 55px 20px 90px;
+  }
+
+  .not-found-number {
+    font-size: 125px;
+
+    letter-spacing: -5px;
+  }
+
+  .not-found-content h1 {
+    font-size: 36px;
+  }
+
+  .not-found-content > p {
+    max-width: 450px;
+
+    font-size: 13px;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .not-found-primary-btn,
+  .not-found-secondary-btn {
+    width: 100%;
+
+    max-width: 280px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .not-found-container {
+    padding: 45px 18px 90px;
+  }
+
+  .not-found-logo {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+  }
+
+  .not-found-number {
+    font-size: 100px;
+
+    letter-spacing: -4px;
+  }
+
+  .not-found-label {
+    margin-top: 20px;
+
+    font-size: 9px;
+  }
+
+  .not-found-content h1 {
+    margin-top: 10px;
+
+    font-size: 30px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .not-found-content > p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .not-found-actions {
+    margin-top: 25px;
+
+    gap: 9px;
+  }
+
+  .not-found-primary-btn,
+  .not-found-secondary-btn {
+    height: 44px;
+
+    font-size: 11px;
+  }
+
+  .not-found-footer-text {
+    bottom: 18px;
+
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  .circle-one {
+    width: 300px;
+    height: 300px;
+
+    top: -150px;
+    right: -150px;
+  }
+
+  .circle-two {
+    width: 280px;
+    height: 280px;
+
+    bottom: -150px;
+    left: -150px;
+  }
+}

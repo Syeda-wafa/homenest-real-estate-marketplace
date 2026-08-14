@@ -1,0 +1,539 @@
+/* =========================
+   PAGE
+========================= */
+
+.my-properties-page {
+  min-height: 100vh;
+  background: #f8f9f6;
+}
+
+.my-properties-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 24px 100px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.my-properties-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.my-properties-label {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: #71877b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.my-properties-header h1 {
+  margin: 0 0 10px;
+
+  color: #183c2c;
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.my-properties-header p {
+  margin: 0;
+
+  color: #78837d;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   ADD PROPERTY BUTTON
+========================= */
+
+.add-property-btn {
+  height: 44px;
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #183c2c;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-property-btn:hover {
+  background: #24563f;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.property-management-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-bottom: 35px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8e3;
+  border-radius: 11px;
+
+  overflow: hidden;
+}
+
+.management-stat {
+  padding: 19px 22px;
+
+  border-right: 1px solid #edf0ee;
+}
+
+.management-stat:last-child {
+  border-right: none;
+}
+
+.management-stat span {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #89928d;
+  font-size: 10px;
+}
+
+.management-stat strong {
+  color: #183c2c;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.my-properties-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.my-properties-toolbar > div {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.my-properties-toolbar strong {
+  color: #183c2c;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.my-properties-toolbar span {
+  color: #7e8983;
+  font-size: 12px;
+}
+
+.my-properties-toolbar select {
+  height: 37px;
+
+  padding: 0 12px;
+
+  border: 1px solid #dfe5e1;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #45524b;
+
+  outline: none;
+  font-size: 11px;
+}
+
+/* =========================
+   PROPERTY LIST
+========================= */
+
+.my-property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* =========================
+   PROPERTY CARD
+========================= */
+
+.my-property-card {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) auto;
+
+  min-height: 190px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #e1e7e3;
+  border-radius: 12px;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.my-property-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px rgba(24, 60, 44, 0.07);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.my-property-image {
+  position: relative;
+  min-height: 190px;
+  overflow: hidden;
+}
+
+.my-property-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.my-property-card:hover .my-property-image img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   PROPERTY STATUS
+========================= */
+
+.property-status {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  padding: 6px 9px;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #315d45;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.my-property-content {
+  min-width: 0;
+  padding: 24px 22px;
+}
+
+.my-property-type {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #71877b;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.my-property-content h2 {
+  margin: 0 0 7px;
+
+  color: #29372f;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.my-property-location {
+  margin: 0 0 16px;
+
+  color: #89928d;
+  font-size: 11px;
+}
+
+.my-property-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+
+  margin-bottom: 15px;
+}
+
+.my-property-price strong {
+  color: #183c2c;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 19px;
+}
+
+.my-property-price span {
+  color: #89928d;
+  font-size: 10px;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.my-property-features {
+  display: flex;
+  gap: 18px;
+}
+
+.my-property-features span {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+
+  color: #89928d;
+  font-size: 10px;
+}
+
+.my-property-features strong {
+  color: #435048;
+  font-size: 11px;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.my-property-actions {
+  min-width: 105px;
+
+  padding: 24px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-left: 1px solid #edf0ee;
+}
+
+.my-property-actions button {
+  height: 34px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =========================
+   VIEW BUTTON
+========================= */
+
+.view-property-btn {
+  border: 1px solid #d8e0db;
+
+  background: #ffffff;
+  color: #547160;
+}
+
+.view-property-btn:hover {
+  border-color: #183c2c;
+  color: #183c2c;
+}
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.edit-property-btn {
+  border: 1px solid #183c2c;
+
+  background: #183c2c;
+  color: #ffffff;
+}
+
+.edit-property-btn:hover {
+  background: #24563f;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-property-btn {
+  border: 1px solid #ead9d9;
+
+  background: #ffffff;
+  color: #a05a5a;
+}
+
+.delete-property-btn:hover {
+  background: #faf0f0;
+  border-color: #cda5a5;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+  .my-properties-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-property-btn {
+    width: 100%;
+  }
+
+  .property-management-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .management-stat:first-child {
+    border-right: 1px solid #edf0ee;
+  }
+
+  .my-property-card {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+
+  .my-property-actions {
+    grid-column: 1 / -1;
+
+    flex-direction: row;
+
+    border-top: 1px solid #edf0ee;
+    border-left: none;
+  }
+
+  .my-property-actions button {
+    flex: 1;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+  .my-properties-container {
+    padding: 35px 15px 60px;
+  }
+
+  .my-properties-header h1 {
+    font-size: 36px;
+  }
+
+  .my-properties-header p {
+    font-size: 13px;
+  }
+
+  .property-management-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .management-stat {
+    padding: 16px;
+  }
+
+  .my-property-card {
+    display: block;
+  }
+
+  .my-property-image {
+    height: 210px;
+    min-height: 210px;
+  }
+
+  .my-property-content {
+    padding: 20px;
+  }
+
+  .my-property-actions {
+    padding: 14px;
+  }
+
+  .my-property-content h2 {
+    font-size: 21px;
+  }
+
+  .my-properties-toolbar {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .my-properties-toolbar select {
+    max-width: 150px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .property-management-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .management-stat {
+    border-right: none;
+    border-bottom: 1px solid #edf0ee;
+  }
+
+  .management-stat:last-child {
+    border-bottom: none;
+  }
+}
