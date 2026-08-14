@@ -6,7 +6,6 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
-const path = require("path");
 
 const connectDB = require("./config/db");
 
@@ -31,7 +30,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://homenest-frontend.vercel.app",
+    ],
     credentials: true,
   })
 );
@@ -42,17 +44,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(morgan("dev"));
-
-// =====================================
-// STATIC UPLOADS
-// IMPORTANT: Images will be available
-// through /uploads/filename
-// =====================================
-
-app.use(
-  "/uploads",
-  express.static(path.join(__dirname, "uploads"))
-);
 
 // =====================================
 // API ROUTES
