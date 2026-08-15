@@ -4,6 +4,18 @@ HomeNest is a full-stack **MERN Real Estate Marketplace** that allows users to e
 
 ---
 
+## 🌐 Live Demo
+
+**Live Application:**
+https://homenest-frontend.vercel.app/
+
+**Backend API:**
+https://homenest-frontend.vercel.app/
+
+> The application is deployed on Vercel with MongoDB Atlas for database management and Cloudinary for property image storage.
+
+---
+
 ## ✨ Features
 
 * 🔐 User Registration & Login
@@ -48,6 +60,13 @@ HomeNest is a full-stack **MERN Real Estate Marketplace** that allows users to e
 * CORS
 * Helmet
 * Morgan
+* Multer
+
+### Cloud Services
+
+* MongoDB Atlas
+* Cloudinary
+* Vercel
 
 ---
 
@@ -56,12 +75,12 @@ HomeNest is a full-stack **MERN Real Estate Marketplace** that allows users to e
 ```text
 HomeNest/
 ├── backend/
+│   ├── config/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
 │   ├── controllers/
 │   ├── utils/
-│   ├── uploads/
 │   ├── .env
 │   ├── package.json
 │   └── server.js
@@ -88,7 +107,7 @@ HomeNest/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/Syeda-wafa/homenest-real-estate-marketplace.git
 cd HomeNest
 ```
 
@@ -107,6 +126,10 @@ Create a `.env` file inside the `backend` folder:
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
+
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ```
 
 Start the backend server:
@@ -120,8 +143,6 @@ Backend will run on:
 ```text
 http://localhost:5000
 ```
-
----
 
 ### 3. Frontend Setup
 
@@ -137,6 +158,12 @@ Frontend will run on:
 
 ```text
 http://localhost:5173
+```
+
+Create a `.env` file inside the `frontend` folder:
+
+```env
+VITE_API_URL=http://localhost:5000/api
 ```
 
 ---
@@ -223,6 +250,7 @@ The application was manually tested across the main modules, including:
 * Search & Filters
 * Responsive UI
 * Error & Empty States
+* Property Image Uploads
 
 ---
 
@@ -237,19 +265,36 @@ HomeNest implements several security practices:
 * Environment variables for sensitive configuration
 * Helmet security middleware
 * CORS configuration
+* Cloudinary-based image storage
+* Multer memory storage for image uploads
 
-> ⚠️ **Important:** Never commit `.env` files, passwords, JWT secrets, or MongoDB credentials to GitHub.
+> ⚠️ **Important:** Never commit `.env` files, passwords, JWT secrets, Cloudinary credentials, or MongoDB credentials to GitHub.
 
 ---
 
 ## 📌 Environment Variables
 
-The backend requires the following environment variables:
+### Backend
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+```
+
+### Frontend
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+For production, `VITE_API_URL` should point to the deployed backend:
+
+```text
+https://homenest-backend.vercel.app/api
 ```
 
 Make sure `.env` is included in `.gitignore`:
@@ -262,10 +307,30 @@ uploads/
 
 ---
 
-## 👩‍💻 Project
+## ☁️ Deployment
+
+HomeNest is deployed using:
+
+* **Frontend:** Vercel
+* **Backend:** Vercel
+* **Database:** MongoDB Atlas
+* **Image Storage:** Cloudinary
+
+### Production URLs
+
+**Frontend:**
+https://homenest-frontend.vercel.app/
+
+**Backend:**
+https://homenest-backend.vercel.app/
+
+---
+
+## 📌 Project
 
 **HomeNest – Real Estate Marketplace**
 
 A full-stack MERN application built to provide a modern platform for discovering, managing, and saving real estate properties.
 
 ---
+
