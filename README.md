@@ -10,7 +10,7 @@ HomeNest is a full-stack **MERN Real Estate Marketplace** that allows users to e
 https://homenest-frontend.vercel.app/
 
 **Backend API:**
-https://homenest-frontend.vercel.app/
+https://homenest-backend.vercel.app/
 
 > The application is deployed on Vercel with MongoDB Atlas for database management and Cloudinary for property image storage.
 
